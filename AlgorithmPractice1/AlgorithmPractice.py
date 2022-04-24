@@ -142,8 +142,8 @@ graph = [list(map(int, input())) for _ in range(n)]
 print(graph)
 from collections import deque
 visited = [[False] * m for _ in range(n)]
-# print(graph)
-# print(visited)
+print(graph)
+print(visited)
 
 # L R U D
 d_row = [0, 0, -1, 1]
@@ -177,7 +177,7 @@ for row in range(n):
         #이중문 돌면서 언제 일때 방문해야돼? 0일때!
         if graph[row][col] == 0: # graph의 좌표 graph[row][col] 이 0일때
             # bfs 순회돌면서 주위에 0있는지 찾아
-            bfs(graph, visited, [row, col])
+            bfs(graph, visited, [row, col]) # 다 돌았어? 모여있는 0이 몇개인지 세!
             count += 1
 
 print(count)
